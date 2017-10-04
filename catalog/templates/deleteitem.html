@@ -1,0 +1,36 @@
+<html>
+<head>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename = 'style3.css') }}">
+</head>
+<div class = "container-top">
+  <h1>Catalog App</h1>
+        <ul>
+          <li><a href = {{url_for('showHome') }}>Main Page</a></li>
+        </ul>
+          </div>
+
+          <body>
+
+            <form action="{{ url_for('deleteItem', category_id = item.category_id, item_id = item.id)}}" method = 'post'>
+              <div class = "page-title">
+                Delete Item
+              </div>
+
+              <div class = container-body-categories>
+
+              <div class = "item-info">
+                Are you sure you want to delete {{item.name}}?
+              </div>
+
+              <div class = "bottombtn">
+              </br>
+                <input type='submit', value = 'Delete'>
+                <input type = 'button' value = "Go Back" onclick = "history.back(-1)">
+              </div>
+            </form>
+            </div>
+
+</body>
+
+</html>
+

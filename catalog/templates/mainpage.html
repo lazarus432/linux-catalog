@@ -1,0 +1,50 @@
+<html>
+<head>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename = 'style3.css') }}">
+</head>
+  <div class = "container-top">
+    <h1>Catalog App</h1>
+          <ul>
+            <li><a href = {{url_for('newCategory') }}>Create New Category</a></li>
+            {% if 'username' not in session %}
+            <div class = "login-dc">
+              <li><a href = {{url_for('login') }}>Log In</a></li>
+            {% else %}
+              <li><a href = {{url_for('gdisconnect') }}>Log Out</a></li>
+            {% endif %}
+            </div>
+          </ul>
+          <body>
+            <div class = "container-body">
+              <div class = 'left-main'>
+                <h3>Categories</h3>
+                <div class = 'category-name'>
+                  {{ category.name }}
+                </div>
+                  {% for c in category %}
+
+            <div class = 'showItems'>
+              <a href = {{url_for('showItems', category_id = c.id) }}>{{c.name}}</a>
+            </div>
+            <div class = 'deletebtn'>
+              <a href = {{url_for('deleteCategory', category_id = c.id) }} >Delete</a>
+            </div>
+
+            {% endfor %}
+            </div>
+
+            <div class = 'right-main'>
+              <h3>Latest Additions</h3>
+              {% for i in items %}
+              <b>{{i.name}}</b> (<em>{{i.itemtype}}</em>)</br>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+
+      </body>
+      <footer>
+      </footer>
+
+</html>
+

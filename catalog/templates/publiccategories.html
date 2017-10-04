@@ -1,0 +1,36 @@
+<html>
+<head>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename = 'style3.css') }}">
+</head>
+<div class = "container-top">
+  <h1>Catalog App</h1>
+        <ul>
+          <li><a href = {{url_for('showHome') }}>Main Page</a></li>
+        </ul>
+          </div>
+          <div class = "page-title">
+              {{category.name}}</br>
+              </div>
+        <body>
+
+          <div class = "container-body-categories">
+              {% for i in items %}
+              <div class = "item-name">
+                <h2>{{i.name}}</h2><em>(Created By: {{creator.name}})</em>
+              </div>
+
+              <div class = "item-info">
+                    <h4>Description:</h4><p>{{i.description}}</p>
+                    <h4>Price:</h4><p>${{i.price}}</p>
+                    <h4>Type:</h4><p>{{i.itemtype}}</p>
+              </div>
+            </br>
+            <hr>
+              {% endfor %}
+          </div>
+          </br>
+          </br>
+
+        </body>
+</html>
+

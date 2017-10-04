@@ -1,0 +1,55 @@
+<html>
+<head>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename = 'style3.css') }}">
+</head>
+<div class = "container-top">
+  <h1>Catalog App</h1>
+        <ul>
+          <li><a href = {{url_for('showHome') }}>Main Page</a></li>
+        </ul>
+          </div>
+  <body>
+    <div class = "page-title">
+      Create New Item
+    </div>
+
+  <div class = "container-body-newitem">
+
+    <form action= "{{ url_for('newItem', category_id = category_id) }}" method = 'post'>
+
+      <div class = "item-name">
+        Name:
+
+        <input type='text' size='30' name='name'>
+
+      </div>
+      <div class = "item-desc">
+        Description:
+        <div class = "desc-textbox">
+          <textarea name = 'description' cols = '50' rows = '10'>Enter description...</textarea>
+        </div>
+      </div>
+      <div class = "item-price">
+        Price:
+
+        <input type='text' size='30' name='price'>
+
+      </div>
+      <div class = "item-category">
+        Category:
+
+        <input type = 'text' size = '30' name = 'itemtype'>
+      </div>
+    </br>
+
+    <div class = "bottombtn">
+      <input type = 'submit' value= 'Create'>
+      <input type = 'button' value = "Go Back" onclick = "history.back(-1)" />
+    </div>
+
+    </form>
+  </div>
+</body>
+
+</html>
+

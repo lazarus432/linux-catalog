@@ -1,0 +1,50 @@
+<html>
+<head>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename = 'style3.css') }}">
+</head>
+<div class = "container-top">
+  <h1>Catalog App</h1>
+        <ul>
+          <li><a href = {{url_for('showHome') }}>Main Page</a></li>
+          <li><a href = {{url_for('newItem', category_id = category_id) }}>New Item</a></li>
+        </ul>
+          </div>
+  <body>
+
+    <div class = "page-title">
+      {{category.name}}</br>
+    </div>
+
+    <div class = "container-body-categories">
+      {% for i in items %}
+      <div class = "item-name">
+        <h2>{{i.name}}</h2><em>(Created By: {{creator.name}})</em>
+      </div>
+
+      <div class = "edit-delete">
+        <button type = 'button'><a href = {{url_for('deleteItem', category_id = category_id, item_id = i.id) }}>Delete Item</a></button>
+        <button type = 'button'><a href = {{url_for('editItem', category_id = category_id, item_id = i.id) }}> Edit Item</a></button>
+      </div>
+    </br>
+
+    <div class = 'item-desc'>
+      Description:<p>{{i.description}}</p>
+    </div>
+    <div class = 'item-price'>
+      Price:<p>${{i.price}}</p>
+    </div>
+    <div class = 'item-category'>
+      Type:<p>{{i.itemtype}}</p>
+    </div>
+    </br>
+    <hr>
+        {% endfor %}
+    </div>
+
+
+    </br>
+    </br>
+
+
+  </body>
+</html>
