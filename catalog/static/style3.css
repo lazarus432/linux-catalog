@@ -1,0 +1,188 @@
+body {
+  width: 100%;
+  background-color: lightgray;
+  margin: 0;
+}
+
+.container-top {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.login-dc {
+  display: inline-flex;
+}
+
+h1 {
+  width: 100%;
+  background-color: gray;
+  margin: 0;
+  font-family: fantasy;
+  padding: 10px;
+}
+
+h2 {
+  width: 100%;
+  font-family: fantasy;
+}
+
+form {
+  font-family: fantasy;
+  font-size: 15;
+}
+
+input {
+  margin: 10px;
+}
+
+.bottombtn {
+  text-align: center;
+}
+
+
+ul {
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #477da9;
+  border: 2px solid black;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #555;
+  color: white;
+}
+
+.container-body {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+.container-body-categories {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+.container-body-newitem {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+form {
+  width: 100%;
+}
+
+.item-name {
+  width: 100%;
+  padding: 10px;
+}
+
+.item-desc {
+  width: 100%;
+  padding: 10px;
+  padding-top: 30px;
+}
+
+.desc-textbox {
+  padding: 10px;
+}
+
+.item-price {
+  width: 100%;
+  padding: 10px;
+}
+
+.item-category {
+  width: 100%;
+  padding: 10px;
+}
+
+.edit-delete {
+  width: 50%;
+  padding: 10px;
+  padding-left: 0;
+}
+
+.item-info {
+  width: 100%;
+  padding-left: 30px;
+}
+
+hr {
+  width: 100%;
+}
+
+.result {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 25px;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+
+.left-main {
+  width: 25%;
+  border-right: solid black;
+  text-align: left;
+}
+
+.page-title {
+  font-size: 35px;
+  text-align: center;
+  padding-top: 10px;
+  font-family: fantasy;
+}
+
+h3 {
+  font-size: 30px;
+  font-style: normal;
+  font-family: fantasy;
+}
+
+.showItems {
+  font-family: sans-serif;
+  font-size: 18px;
+  text-align: left;
+}
+
+.bottombtn {
+  width: 100%;
+}
+
+.deletebtn {
+  margin: 1em;
+  font-size: 15px;
+}
+
+.right-main {
+  width: 74%;
+  font-size: 15px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+  height: 70px;
+}
+
